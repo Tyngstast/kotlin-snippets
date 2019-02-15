@@ -20,7 +20,15 @@ val os: String by lazy {
 
 }
 
+val multiLineString = """
+    |indent and margin
+       |will get
+      |trimmed
+""".trimIndent().trimMargin()
+
 fun main() {
     for (i in 1..3)
         println(os)
+
+    println(multiLineString)
 }

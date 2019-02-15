@@ -21,3 +21,4 @@ fun main() {
     println("Jane Doe".getFirstWord(separator = " "))
     println("Jane Doe".firstWord)
 }
+
