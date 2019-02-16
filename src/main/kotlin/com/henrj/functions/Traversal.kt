@@ -23,6 +23,7 @@ fun main() {
 private fun Element.extractText(): String {
     val sb = StringBuilder()
     fun extractText(e: Element) {
+        // sealed class ensures we do not need a default case. e can only be Container or Text
         when (e) {
             is Text -> sb.append(e.text)
             is Container -> e.children.forEach(::extractText)
